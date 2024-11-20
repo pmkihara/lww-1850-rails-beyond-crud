@@ -4,13 +4,8 @@
 
 <h1>Restaurants</h1>
 
-<div id="restaurants">
-  <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
-    </p>
-  <% end %>
-</div>
+<%= link_to '5-star restaurants', top_restaurants_path, class: 'btn btn-info' %>
+
+<%= render 'list', restaurants: @restaurants %>
 
 <%= link_to "New restaurant", new_restaurant_path %>
